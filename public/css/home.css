@@ -1,0 +1,97 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.pageContainer{
+ min-height: 100vh;
+
+ background-image: url("../images/money.jpg");
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ position: relative;
+ opacity: 100%;
+ display: flex;
+ flex-direction: column;
+
+ align-items: center;
+
+}
+
+
+
+.navBar{
+  position: relative;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(47, 116, 235);
+}
+
+.navInfoDiv{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.AboutPage{
+ padding-left: 50px;
+
+
+}
+
+a{
+  color: aliceblue;
+  text-decoration: none;
+  margin-left: 20px;
+
+}
+
+
+a:hover{
+  
+  text-decoration-line: underline;
+padding-top: 25px;
+transition: ease-in-out 0.5s;
+}
+
+button{
+
+  padding: 13px;
+  background-color: rgb(143, 105, 72);
+  width: 100px;
+  border-radius: 50px;
+ border: none;
+ color: white;
+}
+
+button:hover{
+  background-color: rgb(119, 83, 52);
+  transition: ease-in 0.5s;
+  color: azure;
+  cursor: pointer;
+}
+
+.section{
+  width: 600px;
+  height: 380px;
+background-color: rgba(255, 255, 255, 0.461);
+opacity: 90%;
+position: relative;
+margin-top: 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 20px;
+padding-left: 10px;
+border-radius: 20px;
+box-shadow: 100px;
+box-sizing: border-box;
+
+
+}
+
+p{
+  font-size: 17px;
+}

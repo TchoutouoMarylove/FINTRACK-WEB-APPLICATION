@@ -1,0 +1,97 @@
+body{
+  background-color: rgb(192, 208, 225);
+}
+
+
+.Page{
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  background-image: url("../images/money.jpg");
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ position: relative;
+ padding-left: 200px;
+
+}
+
+form{
+  height: 420px;
+  width: 300px;
+  background-color: rgba(143, 105, 72);;
+ opacity: 80%;
+  border-radius: 25px;
+  
+padding: 30px;
+}
+
+.formHead{
+color: rgb(129, 184, 201);
+ font-weight: bolder;
+ font-size: large;
+ 
+
+
+
+}
+button{
+
+  padding: 13px;
+  background-color: rgb(96, 70, 48);
+  width: 100px;
+  border-radius: 50px;
+ border: none;
+ color: white;
+ width: 250px;
+}
+
+button:hover{
+  background-color: rgb(57, 30, 6);
+  transition: ease-in 0.5s;
+  color: azure;
+  cursor: pointer;
+}
+
+
+
+.containerForm{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: px;
+border-radius: 10px;
+height: 400px;
+
+
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+
+
+
+
+}
+
+label{
+
+color: rgb(129, 184, 201);
+
+}
+
+
+input{
+  width: 250px;
+  margin-bottom: 40px;
+  height: 30px;
+  
+  border-color: rgb(222, 225, 227);
+  border-radius: 8px;
+}
+input:focus{
+  outline: none;
+  right: inherit;
+}
