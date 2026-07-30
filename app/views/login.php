@@ -1,3 +1,31 @@
+
+<?php
+
+require_once "../controllers/Usercontroller.php";
+
+$userController = new Usercontroller();
+
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+
+    if (isset($_POST['submitBtn'])) {
+
+        $result = $userController->login($_POST);
+
+        // If login() returns an error
+        if ($result !== null) {
+            echo $result['message'];
+        }
+    }
+}
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +38,7 @@
 <body>
 <!--This is the div containing the whole page-->
 <div class="Page">
-<form action="" method="_POST">
+<form action="" method="POST">
   <div class="containerForm">
 
   <div class="formHead">

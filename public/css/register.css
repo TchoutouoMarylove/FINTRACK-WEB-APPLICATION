@@ -95,3 +95,16 @@ input:focus{
   outline: none;
   right: inherit;
 }
+
+#message {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#message.success {
+    color: green;
+}
+
+#message.error {
+    color: red;
+}

@@ -2,7 +2,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,13 +59,27 @@
 </div>
   <br>
 <div>
-  <button style="opacity: 100%">Register</button>
+  <button style="opacity: 100%" type="submit" id="register">Register</button>
 </div>
 
 
 </section>
 
 
+<section class="about">
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
 
 
 

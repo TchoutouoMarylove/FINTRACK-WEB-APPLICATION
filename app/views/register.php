@@ -1,3 +1,11 @@
+<?php require_once "../controllers/Usercontroller.php";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { 
+  $userController = new Usercontroller();
+   $result = $userController->createUser($_POST); header('Content-Type: application/json'); 
+   echo json_encode($result);
+    exit(); } ?>
+
 
 
 
@@ -17,7 +25,7 @@
 <body>
 <!--This is the div containing the whole page-->
 <div class="Page">
-<form action="" method="_POST">
+<form action="" method="POST" id="registerForm">
   <div class="containerForm">
 
   <div class="formHead">
@@ -49,6 +57,10 @@
  placeholder="Enter your Password">
 </div>
 
+<div id="message">
+
+</div>
+
 <div>
   <button
   type="submit"
@@ -68,5 +80,12 @@
    </div>
 </form>
 </div>
+
+
+
+
+  <script src="../../public/js/register.js">
+
+  </script>
 </body>
 </html>
