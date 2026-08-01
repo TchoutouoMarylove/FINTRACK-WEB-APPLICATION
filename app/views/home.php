@@ -33,7 +33,7 @@
   </div>
 <!--This is the div containing the button-->
   <div>
-    <button>Login</button>
+    <button id="login">Login</button>
   </div>
 </div>
 </nav>
@@ -88,5 +88,27 @@
 
 
 </div>
+
+<script>
+const register = document.getElementById("register");
+
+register.addEventListener("click", function(){
+  window.location.href ="./register.php"
+});
+
+const login = document.getElementById("login")
+
+login.addEventListener("click", function(){
+  window.location.href ="./login.php"
+});
+
+
+
+
+</script>
+
+
+
+
 </body>
 </html>
