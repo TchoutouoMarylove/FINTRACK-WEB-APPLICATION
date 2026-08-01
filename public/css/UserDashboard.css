@@ -219,17 +219,40 @@ display: none;
 
 .income-form{
   
-  background-color: skyblue;
-  height: 300px;
+   background-color: rgb(78, 136, 236);
+  height: 400px;
   position: relative;
   width: 300px;
   border-radius: 20px;
-  padding: px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+ align-items: center;
+  box-shadow: 20px black;
+  margin-top: -20px;
+  padding-bottom: 70px;
+  padding-top: 30px;
+  padding-left: 20px;
 
 
+}
+
+.income-form input{
+
+  height: 30px;
+  width: 280px;
+  border-radius: 10px;
+  border: none;
+
+}
+
+.income-form input:focus{
+outline: none;
+
+}
+
+.income-form label{
+  color: white;
+ 
 }
 

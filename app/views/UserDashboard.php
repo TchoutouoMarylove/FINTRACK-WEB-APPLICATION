@@ -148,16 +148,13 @@ color:
 
 
 
-
+<!--The INCOME MODAL-->
 
 <div id="incomeModal" class="modal-income">
   <div class="income-form">
 
-  <button id="closeModal" >
-    close
-  </button>
-<h2>Record Income</h2>
-
+<h2 style="color: white;font-size: 30px;">Record Income</h2>
+<br>
 <form action="">
 <div>
 <label for="">Amount</label>
@@ -166,8 +163,16 @@ color:
 
 </div>
 <br>
+
 <div>
-  <label for="">Income Source</label>
+
+<label for="">Income source</label>
+
+<input type="text" placeholder="e.g Employer">
+</div>
+<br>
+<div>
+  <label for="">Income Type</label>
   <br>
  <select name="" id="">
   <option value="">Salary</option>
@@ -180,69 +185,37 @@ color:
 
 </div>
 <br>
+<div>
+<label for="">Description</label>
+<br> 
+<input type="text">
 
+</div>
+<br>
 <div>
 <label for="">Date</label> <br>
 <input type="date" name="" id="">
 
 </div>
-<br>
+<br><br>
 <div>
-<button type="submit">Save income</button>
+<button type="submit"
+style="width: 140px;
+height: 30px;"
+>Save income</button>
+<button type="submit"
+style="width: 140px;
+height: 30px;"
+>Cancel Income</button>
+
+
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<button id="closeModal">X</button>
 
 </form>
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ </div>
 </div>
 
 
@@ -265,11 +238,14 @@ color:
 
 
 
+<script src="../../public/js/incomeform.js">
+
+
+</script>
 
 
 
-
-  <script src="../../public/js/incomeform.js">
+  
 
 </body>
 </html>
