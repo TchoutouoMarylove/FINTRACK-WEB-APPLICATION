@@ -42,6 +42,8 @@ class Usercontroller{
         if(!$password_match){
           die("invalid username or password");
         }else{
+        
+        $_SESSION['username'] =$user['username'];
           header("Location: ../Views/UserDashboard.php");
           exit();
         }
