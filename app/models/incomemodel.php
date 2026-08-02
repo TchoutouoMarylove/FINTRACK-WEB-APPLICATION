@@ -112,24 +112,15 @@ ORDER BY income_date DESC";
     $user_id
 ) {
 
-    $query = "DELETE FROM income
-              WHERE income_id = ?
-              AND user_id = ?";
+    $query = "DELETE FROM income WHERE income_id = ? AND user_id = ?";
 
 
-    $stmt =
-        $this->conn->prepare(
-            $query
-        );
-
-
-    if (!$stmt) {
-
-        return [
-            'status' => 'error',
-            'message' =>
-                'Failed to prepare delete query: '
-                . $this->conn->error
+    $stmt = $this->conn->prepare( $query);
+if (!$stmt) {
+     return [
+'status' => 'error',
+'message' =>
+'Failed to prepare delete query: '. $this->conn->error
         ];
 
     }
