@@ -107,7 +107,73 @@ ORDER BY income_date DESC";
     }
 
 
+    public function deleteIncome(
+    $income_id,
+    $user_id
+) {
 
+    $query = "DELETE FROM income
+              WHERE income_id = ?
+              AND user_id = ?";
+
+
+    $stmt =
+        $this->conn->prepare(
+            $query
+        );
+
+
+    if (!$stmt) {
+
+        return [
+            'status' => 'error',
+            'message' =>
+                'Failed to prepare delete query: '
+                . $this->conn->error
+        ];
+
+    }
+
+
+    $stmt->bind_param(
+        "ii",
+        $income_id,
+        $user_id
+    );
+
+
+    if (!$stmt->execute()) {
+
+        return [
+            'status' => 'error',
+            'message' =>
+                'Failed to delete income: '
+                . $stmt->error
+        ];
+
+    }
+
+
+    if (
+        $stmt->affected_rows === 0
+    ) {
+
+        return [
+            'status' => 'error',
+            'message' =>
+                'Income not found or you do not have permission to delete it.'
+        ];
+
+    }
+
+
+    return [
+        'status' => 'OK',
+        'message' =>
+            'Income deleted successfully'
+    ];
+
+}
 
 
 
