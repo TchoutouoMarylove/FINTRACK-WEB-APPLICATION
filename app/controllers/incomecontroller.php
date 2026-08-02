@@ -11,12 +11,12 @@ public function createIncome(array $data){
       global $income;
       if (!isset($_SESSION['id'])) {
 
-                return [
-                    'status' => 'error',
-                    'message' => 'User is not logged in'
-                ];
+    return [
+     'status' => 'error',
+     'message' => 'User is not logged in'
+     ];
 
-            }
+  }
     $user_id = $_SESSION['id'];
 
       $amount = $data['amount'] ?? '';
@@ -52,53 +52,101 @@ public function createIncome(array $data){
         global $income;
 
 
-        if (!isset($_SESSION['id'])) {
+  if (!isset($_SESSION['id'])) {
 
-            return [
-                'status' => 'error',
-                'message' =>
-                    'User is not logged in'
-            ];
+  return [
+     'status' => 'error',
+    'message' =>
+   'User is not logged in'
+  ];
 
-        }
-
-
-        $user_id =
-            $_SESSION['id'];
+  }
 
 
-        return $income->getUserIncomes(
-            $user_id
-        );
+ $user_id =
+  $_SESSION['id'];
+
+
+  return $income->getUserIncomes(
+  $user_id
+ );
     }
 
 
 
+public function deleteIncome(
+    $income_id
+) {
+
+global $income;
 
 
+if (!isset($_SESSION['id'])) {
+
+ return [
+  'status' => 'error',
+  'message' =>
+  'User is not logged in'
+  ];
+
+    }
 
 
+  $user_id =
+  $_SESSION['id'];
 
+
+    if (empty($income_id)) {
+
+  return [
+  'status' => 'error',
+   'message' =>
+   'Income ID is required'
+        ];
+
+    }
+
+
+    return $income->deleteIncome(
+   $income_id,
+   $user_id
+    );
+
+}
 
 }
 
 $incomeController = new incomeController();
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (
+    $_SERVER['REQUEST_METHOD']
+    === 'POST'
+) {
 
-    header('Content-Type: application/json');
+header(
+  'Content-Type: application/json'
+  );
+   $action =
+    $_POST['action'] ?? '';
+if (
+    $action === 'create'
+ ) {
+  $result = $incomeController->createIncome($_POST);
+ }elseif ($action === 'delete') {
+$income_id = $_POST['income_id'] ?? '';
 
-    $result = $incomeController->createIncome($_POST);
+$result =  $incomeController ->deleteIncome($income_id);
+} else {
+$result = [
+'status' => 'error',
+'message' => 'Invalid action' ];
 
-    echo json_encode($result);
-
-    exit();
 }
 
-
-
-
+ echo json_encode($result );
+exit();
+}
 
 
 
