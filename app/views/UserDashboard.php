@@ -169,11 +169,11 @@ color:
 
 <h2 style="color: white;font-size: 30px;">Record Income</h2>
 <br>
-<form action="">
+<form id="incomeForm"   action="" method="POST">
 <div>
 <label for="">Amount</label>
 <br>
-<input type="number" name="" id="" placeholder="Enter the amount" required>
+<input type="number" name="amount" id="" placeholder="Enter the amount" required>
 
 </div>
 <br>
@@ -182,19 +182,20 @@ color:
 
 <label for="">Income source</label>
 
-<input type="text" placeholder="e.g Employer">
+<input type="text" placeholder="e.g Employer"
+name="incomeSource" required>
 </div>
 <br>
 <div>
   <label for="">Income Type</label>
   <br>
- <select name="" id="">
-  <option value="">Salary</option>
-  <option value="">Business</option>
-  <option value="">Freelance</option>
-  <option value="">Investment</option>
-  <option value="">Gift</option>
-  <option value="">others</option>
+ <select name="incomeType" id="incomeType" required >
+  <option value="Salary">Salary</option>
+  <option value="Business">Business</option>
+  <option value="Freelance">Freelance</option>
+  <option value="Investment">Investment</option>
+  <option value="Gift">Gift</option>
+  <option value="others">others</option>
  </select>
 
 </div>
@@ -202,64 +203,43 @@ color:
 <div>
 <label for="">Description</label>
 <br> 
-<input type="text">
+<input type="text" name="description" required>
 
 </div>
 <br>
 <div>
 <label for="">Date</label> <br>
-<input type="date" name="" id="">
+<input type="date" name="date" id="">
 
 </div>
 <br><br>
+<div id="message">
+
+
+</div>
 <div>
 <button type="submit"
 style="width: 140px;
 height: 30px;"
 >Save income</button>
-<button type="submit"
+<!-- <button type="submit"
 style="width: 140px;
 height: 30px;"
->Cancel Income</button>
+>Cancel Income</button> -->
 
 
 
 </div>
 <br>
-<button id="closeModal">X</button>
+<button id="closeModal" type="button">X</button>
 
 </form>
  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="../../public/js/incomeform.js">
 
 
 </script>
-
-
-
-  
-
 </body>
 </html>
+
