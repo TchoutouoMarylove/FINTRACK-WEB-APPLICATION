@@ -42,15 +42,35 @@ color:
 </div>
 
 <div class="middleSide">
+   <div id="incomeDiv">
+    <a href="./home.php"
+     style="
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  "
+    
+    >Home</a>
+  </div>
+
   <div>
     Dashboard
   </div>
   <div id="incomeDiv">
-    Income
+    <a href="./recincomePage.php"
+     style="
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  "
+    
+    >Income</a>
   </div>
+
   <div>
     Expenses
   </div>
+
   <div>
     Budget
   </div>
@@ -116,7 +136,7 @@ color:
  <div class="transanctionProper">
 
 
-  <div>RECENT TRANSACTION</div>
+  <div style="color: white; ">RECENT TRANSACTION</div>
 
 <table class="table">
 <thead class="info">
@@ -240,9 +260,9 @@ height: 30px;"
 <script src="../../public/js/incomeform.js">
 
   
-document.getElementById("incomeDiv").addEventListener("click", function(){
-   window.location.href ="./recincomePage.php"
-})
+// document.getElementById("incomeDiv").addEventListener("click", function(){
+//    window.location.href ="./recincomePage.php"
+// })
 
 </script>
 </body>

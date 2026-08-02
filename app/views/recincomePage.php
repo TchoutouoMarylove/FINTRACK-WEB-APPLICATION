@@ -52,7 +52,14 @@ foreach ($incomes as $income) {
 
    <div class="linkTopages">
 
-   <div>Dashboard</div>
+   <div><a href="./UserDashboard.php"
+  style="
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  "
+
+   >Dashboard</a></div>
 <div>Income</div>
 
 <div>Expenses</div>
@@ -107,14 +114,15 @@ style="   padding: 10px;
 <td>Type</td>
 <td>Description</td>
 <td>Date</td>
+  <td>Actions</td>
 </tr>
 
 </thead>
   <tbody>
 
- <?php if ( empty($incomes) ): ?>
+ <?php if (empty($incomes) ): ?>
 <tr>
-     <td colspan="5" style="
+     <td colspan="6" style="
 text-align: center;
 color: white; ">
  No income records found.
@@ -132,23 +140,16 @@ color: white; ">
 $income['income_source']) ?>
 
 </td>
-
-
 <td>
 
 <?= htmlspecialchars($income['income_type']) ?>
 
 </td>
 
-
-
  <td>
 <?= htmlspecialchars( $income['description']) ?>
 
 </td>
-
-
-
    <td>
 
 <?= htmlspecialchars($income['income_date']
@@ -156,23 +157,39 @@ $income['income_source']) ?>
 
  </td>
 
+ <td><Button type="button" 
+ class="editIncomeBtn"
 
-   </tr>
+ data-id = "<?= $income['income_id'] ?>"
+ >Edit</Button>
 
+ <button
+type="button"
+class="deleteIncomeBtn"
+data-id="<?= $income['income_id'] ?>">
+Delete</button>
 
- <?php endforeach; ?>
+</td>
+</tr>
 
-
- <?php endif; ?>
-
-
+<?php endforeach; ?>
+<?php endif; ?>
 </tbody>
-
-
 </table>
 </div>
 </div>
-</div>  
+</div> 
+
+
+
+
+
+<script src="../../public/js/incomeform.js">
+
+
+
+</script>
+
 </body>
 </html>
 
