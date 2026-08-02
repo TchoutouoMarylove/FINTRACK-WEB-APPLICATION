@@ -45,7 +45,7 @@ color:
   <div>
     Dashboard
   </div>
-  <div>
+  <div id="incomeDiv">
     Income
   </div>
   <div>
@@ -236,8 +236,13 @@ height: 30px;"
 </form>
  </div>
 </div>
+
 <script src="../../public/js/incomeform.js">
 
+  
+document.getElementById("incomeDiv").addEventListener("click", function(){
+   window.location.href ="./recincomePage.php"
+})
 
 </script>
 </body>
